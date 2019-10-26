@@ -1,2 +1,0 @@
-sgement .text
-
