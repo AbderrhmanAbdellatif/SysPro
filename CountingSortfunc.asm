@@ -11,6 +11,10 @@ countingsort:
 
    mov edx,[ebp+12] ; int max =a[0]
    mov ecx,[ebp+8]  ; count 
+  
+   ; for (i = 1; i < n; i++) 
+   ;      if (a[i] > max) 
+;         max = a[i]; 
 
 MXloop:   
    mov eax,4  ; int i = 1
@@ -18,13 +22,13 @@ MXloop:
    jge  L1      ; end of loop one 
    jl  MXloop      ; end of loop one 
  
-   
+
    cmp [ebp+eax],edx ; a[i] > max      
    jl  maxim
 
 maxim  mov edx,[ebp+eax] ; max = a[i]
-  
+
    add eax,4 ; i++  
-   
+
 L1:   
 
