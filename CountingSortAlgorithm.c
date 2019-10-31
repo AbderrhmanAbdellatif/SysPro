@@ -4,7 +4,7 @@
     //https://www.thecrazyprogrammer.com/2015/04/counting-sort-program-in-c.html
 #include <stdio.h>
 #include <stdlib.h> 
-void counting_sort(int a[],int n)
+void countingsort(int a[],int n)
 {
       
     // find a max 
@@ -37,7 +37,7 @@ int main()
       scanf("%d",&array[i]);
       }
      
-      counting_sort(array,n);
+      countingsort(array,n);
      
 }
 
