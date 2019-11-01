@@ -30,7 +30,7 @@ void countingsort(int *a,int n)
        printf("%d ",i);
 }
 */
-int countingsort(int n, int *arr);
+void arryret(int n, int *arr);
 void main()
 {
     int *array, n, i;
@@ -42,7 +42,11 @@ void main()
         printf("%d . sayiyi giriniz : ", i);
         scanf("%d", &array[i]);
     }
-
-    printf("max %d",countingsort(n, array));
+    arryret(n, array);
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d . say ", array[i]);
+       
+    }
      exit(0);
 }

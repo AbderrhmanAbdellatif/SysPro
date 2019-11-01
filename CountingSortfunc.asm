@@ -14,7 +14,7 @@ countingsort:
     mov  ebx,[eax]   
     mov  [ebp-8],ebx        ; 1st no of array is the smallest
 
-    mov edx,[ebp+8] 
+    mov edx,[ebp+8]    ;count
     mov ecx, [ebp+12]       ; ecx hold start address of array
 
 loop:

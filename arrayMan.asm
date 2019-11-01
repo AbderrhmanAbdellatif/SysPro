@@ -1,10 +1,10 @@
 segment .text
-global countingsort
+global arryret
 ; nasm -f elf32 csf.asm
 ; in C calling conventions
 ; ebx,esi,edi,ebp,cs,ds,ss,es should remain unchanged
 ;void countingsort(int *a,int n)
-countingsort:
+arryret:
     push ebp
     mov  ebp,esp
     push ebx
@@ -16,21 +16,17 @@ countingsort:
 
     mov edx,[ebp+8] 
     mov ecx, [ebp+12]       ; ecx hold start address of array
-
+    inc DWORD  [ecx]
 loop:
     add ecx,4               ; ecx hold address of next element of array
-    mov eax,[ecx]   
-    cmp eax,[ebp-8]
-    jle next
-    mov [ebp-8],eax    
+    inc DWORD  [ecx]
 
-next:
     dec edx
     cmp edx,1
     jne loop
 
 ending:
-    mov  eax,[ebp-8]        ; [ebp-8] holds the smallest
+    mov  eax,[ebp+12]        ; [ebp-8] holds the smallest
     mov  esp,ebp
     sub  esp,4
     pop ebx
