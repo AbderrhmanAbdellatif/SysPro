@@ -1,10 +1,13 @@
 
 
-    // Counting sort in C programming
-    //https://www.thecrazyprogrammer.com/2015/04/counting-sort-program-in-c.html
+// Counting sort in C programming
+//https://www.thecrazyprogrammer.com/2015/04/counting-sort-program-in-c.html
 #include <stdio.h>
-#include <stdlib.h> 
-void countingsort(int a[],int n)
+#include <stdlib.h>
+
+
+/*
+void countingsort(int *a,int n)
 {
       
     // find a max 
@@ -26,19 +29,20 @@ void countingsort(int a[],int n)
       for(j=1;j<=count[i];++j)
        printf("%d ",i);
 }
-int main()
-{ 
-       int *array,n,i;
-      printf("Enter number of elements:");
-      scanf("%d",&n);
-      array=(int * )malloc(sizeof(int)*n);
-      for(int i = 0 ; i < n ; i++){
-      printf("%d . sayiyi giriniz : ", i );
-      scanf("%d",&array[i]);
-      }
-     
-      countingsort(array,n);
-     
+*/
+int countingsort(int *array, int n);
+void main()
+{
+    int *array, n, i;
+    printf("Enter number of elements:");
+    scanf("%d", &n);
+    array = (int *)malloc(sizeof(int) * n);
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d . sayiyi giriniz : ", i);
+        scanf("%d", &array[i]);
+    }
+
+    printf("max %d",countingsort(array, n));
+     exit(0);
 }
-
-

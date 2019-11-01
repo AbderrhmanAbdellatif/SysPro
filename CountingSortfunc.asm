@@ -14,10 +14,10 @@ countingsort:
   
    ; for (i = 1; i < n; i++) 
    ;      if (a[i] > max) 
-;         max = a[i]; 
+   ;         max = a[i]; 
 
 MXloop:   
-   mov eax,4  ; int i = 1
+   mov eax,8  ; int i = 1
    cmp eax,ecx ; i < n n is counter 
    jge  L1      ; end of loop one 
    jl  MXloop      ; end of loop one 
@@ -32,3 +32,9 @@ maxim  mov edx,[ebp+eax] ; max = a[i]
 
 L1:   
 
+    ; INVENTORY TIMES 50 DW 0 ;    int count[50]={0}
+   mov eax,[ebp-4]
+   mov esp,ebp 
+   pop ebp 
+   ret 
+   
