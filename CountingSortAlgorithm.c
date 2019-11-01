@@ -30,7 +30,7 @@ void countingsort(int *a,int n)
        printf("%d ",i);
 }
 */
-int countingsort(int *array, int n);
+int countingsort(int n, int *arr);
 void main()
 {
     int *array, n, i;
@@ -43,6 +43,6 @@ void main()
         scanf("%d", &array[i]);
     }
 
-    printf("max %d",countingsort(array, n));
+    printf("max %d",countingsort(n, array));
      exit(0);
 }
