@@ -16,10 +16,10 @@ arryret:
 
     mov edx,[ebp+8] 
     mov ecx, [ebp+12]       ; ecx hold start address of array
-    inc DWORD  [ecx]
+    add DWORD  [ecx],1
 loop:
     add ecx,4               ; ecx hold address of next element of array
-    inc DWORD  [ecx]
+    add DWORD  [ecx],1
 
     dec edx
     cmp edx,1
