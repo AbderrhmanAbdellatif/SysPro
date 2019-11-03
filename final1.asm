@@ -95,7 +95,7 @@ for2:
 ending:  
 
     mov esp,ebp
-    sub esp,16
-    pop ebp
+    sub esp,4  
     pop esi
+    pop ebp
     ret 

@@ -30,7 +30,7 @@ void countingsort(int *a,int n)
        printf("%d ",i);
 }
 */
-void arryret(int n, int *arr);
+void final(int n, int *arr);
 void main()
 {
     int *array, n, i;
@@ -42,7 +42,7 @@ void main()
         printf("%d . sayiyi giriniz : ", i);
         scanf("%d", &array[i]);
     }
-    arryret(n, array);
+    final(n, array);
     for (int i = 0; i < n; i++)
     {
         printf("%d . say ", array[i]);
