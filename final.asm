@@ -9,16 +9,16 @@ final:
       sub  esp,12  ;(max= -8 , count=-12 , 4=-16 )place 
       
       mov esi,4  ; esi = 4
-    mov [ebp-16],esi ; [ebp-16] = 4 
-    mov eax,[ebp+8] ; count= eax
-    mov ecx,4  ; ecx = 4
-    mul ecx     ; eax*ecx
+      mov [ebp-16],esi ; [ebp-16] = 4 
+      mov eax,[ebp+8] ;  eax= count
+    ;mov ecx,4  ; ecx = 4
+     mul esi;ecx     ; eax*ecx
     add eax,16  ; move eax count 4 index to up becouse of line 9  
     sub esp,[eax]  ; make a place in stack using count size 
 
     mov  eax,[ebp+12] ;  array first element 
-    mov  ebx,[eax]     ; first element = max
-    mov  [ebp-8],ebx    ; 1st no of array is the max
+    mov  edx,[eax]     ; first element = max
+    mov  [ebp-8],edx    ; 1st no of array is the max
 
       mov edx,[ebp+8]          ;count
       mov ecx, [ebp+12]       ; ecx hold start address of array
@@ -38,9 +38,9 @@ next:
     
       mov ecx, [ebp+12]       ; ecx hold start address of array
       mov edx,[ebp-16]          ;count array first element
-      mov [ebp-12],edx     ; hold count array adderess for future change
+      ;mov [ebp-12],edx     ; hold count array adderess for future change
 
-loop2:
+loop2:                     ;  count[a[i]]=count[a[i]]+1;
                   ; ecx hold address of next element of array     
       mov eax,[ecx]           ; value of index in array a[i]
       mul esi                 ; eax * 4 
