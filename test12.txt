@@ -5,7 +5,7 @@ disSort.o:     file format elf32-i386
 Disassembly of section .group:
 
 00000000 <.group>:
-   0:	01 00                	add    DWORD PTR [eax],eax
+   0:	01 00                	add    DWORD PTR [eax],eax 
    2:	00 00                	add    BYTE PTR [eax],al
    4:	06                   	push   es
    5:	00 00                	add    BYTE PTR [eax],al
@@ -14,7 +14,7 @@ Disassembly of section .group:
 Disassembly of section .text:
 
 00000000 <countingsort>:
-   0:	55                   	push   ebp
+   0:	55                   	push   ebp  
    1:	89 e5                	mov    ebp,esp
    3:	53                   	push   ebx
    4:	83 ec 24             	sub    esp,0x24 ; 36 
