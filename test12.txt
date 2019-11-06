@@ -15,10 +15,10 @@ Disassembly of section .text:
 
 00000000 <countingsort>:
    0:	55                   	push   ebp  
-   1:	89 e5                	mov    ebp,esp
+   1:	89 e5                    	mov    ebp,esp
    3:	53                   	push   ebx
-   4:	83 ec 24             	sub    esp,0x24 ; 36 
-   7:	e8 fc ff ff ff       	call   8 <countingsort+0x8> 
+   4:	83 ec 24             	sub    esp,0x24 ; 6 int   
+   7:	e8 fc ff ff ff       	call   8 <countingsort+0x8>         
    c:	05 01 00 00 00       	add    eax,0x1 ; add one 
   11:	8b 55 0c             	mov    edx,DWORD PTR [ebp+0xc] ; [ebp+12]
   14:	8b 12                	mov    edx,DWORD PTR [edx]  
